@@ -1,0 +1,314 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #9b9b9b;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.carousel-item img {
+    height: 200px; /* Set a fixed height for the images */
+    object-fit: cover; /* Cover the area without stretching */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.navbar-nav {
+    margin: 0 auto;
+}
+.navbar-nav .nav-link {
+    color: black;
+    position: relative;
+    transition: color 0.3s;
+}
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+.navbar-nav .nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+.dropdown-toggle {
+    font-size: 35px;
+}
+
+
+.btn-transparent {
+    background-color: rgba(255, 255, 255, 0.5); /* Transparansi */
+    color: #000; /* Warna teks */
+    border: none; /* Menghilangkan border */
+    transition: background-color 0.3s ease; /* Animasi saat hover */
+}
+
+.btn-transparent:hover {
+    background-color: rgba(255, 255, 255, 0.8); /* Efek hover */
+}
+
+.dropdown-menu {
+    background-color: rgba(255, 255, 255, 0.9); /* Transparansi pada dropdown */
+    border: none; /* Menghilangkan border pada dropdown */
+}
+
+.dropdown-item {
+    color: #000; /* Warna teks item dropdown */
+}
+
+.dropdown-item:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Efek hover pada item dropdown */
+}
+
+main {
+    padding: 20px;
+}
+
+.about {
+    text-align: center;
+    margin-top: 50px;
+}
+.about img {
+    width: 150px;
+    height: 150px;
+}
+.about h2 {
+    margin-top: 20px;
+    font-size: 24px;
+}
+.about p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.content-section {
+    text-align: center;
+    padding: 20px;
+}
+.content-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.content-section p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.gallery img {
+    width: 10%;
+    height: auto;
+    align-items: center;
+}
+.gallery .row {
+    margin-bottom: 20px;
+    text-align: center;
+}
+.gallery-item {
+    margin-bottom: 20px;
+    align-items: center;
+}
+.gallery-item img {
+    width: 75%;
+    height: auto;
+    align-items: center;
+}
+.gallery-item .description {
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+}
+@media (max-width: 767.98px) {
+    .gallery-item {
+        flex-direction: column;
+    }
+}
+.btn-learn-more {
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+.garis-1 {
+    width: 100%; /* Mengatur panjang garis (75% dari lebar elemen induk) */
+    height: 3px; /* Mengatur ketebalan garis */
+    background-color: #000; /* Mengatur warna garis */
+    margin: 20px auto; /* Mengatur margin atas dan bawah, dan center */
+}
+
+.garis-2 {
+    width: 102%; /* Mengatur panjang garis (75% dari lebar elemen induk) */
+    height: 2px; /* Mengatur ketebalan garis */
+    background-color: #000; /* Mengatur warna garis */
+    margin: 20px auto; /* Mengatur margin atas dan bawah, dan center */
+    margin-left: -20px;
+}
+
+.garis-3 {
+    width: 102%; /* Mengatur panjang garis (75% dari lebar elemen induk) */
+    height: 2px; /* Mengatur ketebalan garis */
+    background-color: #000; /* Mengatur warna garis */
+    margin: 20px auto; /* Mengatur margin atas dan bawah, dan center */
+    margin-left: -20px;
+}
+.about-us, .gallery-section {
+    padding: 40px 0;
+}
+.about-us img, .gallery-section img {
+    margin-right: 20px;
+}
+.about-us p {
+    text-align: left;
+    margin: 0;
+    font-size: 20px;
+}
+.about-us .content, .gallery-section .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about-us .content img, .gallery-section .content img {
+    margin-right: 20px;
+}
+.about-us .content p, .gallery-section .content p {
+    max-width: 600px;
+}
+.gallery-section .content.reverse {
+    flex-direction: row-reverse;
+}
+.gallery-section .content.reverse p {
+    text-align: left;
+    margin-left: 20px;
+    margin-right: 0;
+}
+
+.service {
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+    background-color: white;
+}
+
+.product {
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+    background-color: white;
+}
+
+.promotion {
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+    background-color: white;
+}
+
+.service-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+.service-item {
+    text-align: center;
+    padding: 20px;
+}
+.service-item h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+.service-item p {
+    font-size: 14px;
+    text-align: justify;
+}
+.service-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+    color: black;
+}
+
+.visit {
+    text-align: center;
+    margin-top: 50px;
+}
+.visit img {
+    width: 100px;
+    height: 100px;
+}
+.visit h2 {
+    margin-top: 20px;
+    font-size: 24px;
+}
+.visit p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+.scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+.footer .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+.footer .social-icons a {
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem; /* Increase font size */
+    transition: transform 0.3s ease; /* Add transition for animation */
+}
+.footer .social-icons a:hover {
+    transform: scale(1.2); /* Scale up on hover */
+}
+.footer .social-icons i {
+    font-size: 36px; /* Increase icon size */
+    margin-right: 10px;
+}
